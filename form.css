@@ -1,0 +1,170 @@
+body{
+    font-family:'Oswald', sans-serif;
+    background:url("gym_web_1.jpg") center/cover no-repeat;
+    min-height:100vh;
+    color:white;
+    position:relative;
+}
+
+/* Dark overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    z-index:-1;
+}
+
+
+
+.h1{
+    color: white;
+    font-size: 300%;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    display: block;
+}
+
+.h1:hover{
+    color: yellow;
+}
+
+
+/* ================= HEADER ================= */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+.logo span:last-child{
+    color:yellow;
+}
+
+/* ================= NAV ================= */
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+    transform:translateY(-3px);
+}
+
+.namelab{
+    font-size: smaller;
+}
+
+
+
+.name{
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    font-size: large;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 18);
+    color: white;
+}
+
+.age{
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    font-size: large;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 18);
+    color: white;
+}
+
+.height{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    font-size: large;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 18);
+    color: white;
+}
+
+.weate{
+    position: absolute;
+    left: 45%;
+    top: 55%;
+    font-size: large;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 18);
+    color: white;
+}
+
+.address{
+    position: absolute;
+    left: 45%;
+    top: 60%;
+    font-size: large;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 18);
+    color: white;
+}
+
+.phone{
+    position: absolute;
+    left: 45%;
+    top: 65%;
+    font-size: large;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 18);
+    color: white;
+
+}
+
+
+
+.btnf{
+    background-color: rgb(28, 226, 28);
+    font-size: large;
+    padding: 10px 5px;
+    border-radius: 30px;
+    width: 8%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+}
+
+.btnf:hover{
+    transition: 1s;
+    transform: translateY(-10px);
+    background-color: rgb(247, 6, 6);
+    color: yellow;
+}
+
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}

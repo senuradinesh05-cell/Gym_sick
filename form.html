@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Form</title>
+
+<style>
+
+/* ================= BODY ================= */
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:url("gym_web_1.jpg") center/cover no-repeat;
+    min-height:100vh;
+    color:white;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Dark overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    z-index:-1;
+}
+
+/* ================= HEADER ================= */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:yellow;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+    transform:translateY(-3px);
+}
+
+/* ================= FORM SECTION ================= */
+.container{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.form-box{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    width:100%;
+    max-width:400px;
+    animation:fadeSlide 1s ease;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+.form-box h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+.form-box h1:hover{
+    color:yellow;
+    transition:0.3s;
+}
+
+/* Inputs */
+.form-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    font-size:14px;
+    outline:none;
+    transition:0.3s;
+}
+
+.form-box input:focus{
+    background:black;
+    box-shadow:0 0 10px yellow;
+}
+
+/* Button */
+.form-box button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:30px;
+    background:limegreen;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.form-box button:hover{
+    background:red;
+    color:yellow;
+    transform:translateY(-5px);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeSlide{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">GYM <span>SICK</span></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="location.html">Location</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="form-box">
+        <h1>Application Form</h1>
+
+        <form>
+            <input type="text" placeholder="Enter your name" required>
+            <input type="number" placeholder="Enter your age" required>
+            <input type="text" placeholder="Enter your height">
+            <input type="text" placeholder="Enter your weight">
+            <input type="text" placeholder="Enter your address">
+            <input type="tel" placeholder="Enter your phone">
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

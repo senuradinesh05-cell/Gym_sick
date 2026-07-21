@@ -1,0 +1,245 @@
+body{
+    background-image: url("gym_web_1.jpg");
+    background-size: cover;        /* Full screen cover කරයි */
+    background-position: center;   /* Center කරලා පෙන්නයි */
+    background-repeat: no-repeat;  /* Repeat නොවෙයි */
+    background-attachment: fixed;  /* (optional) scroll වෙද්දි image එක fixed */
+}
+
+.header{
+    font-family: fantasy;
+    font-size: 250%;
+    margin-left: 5%;
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    float: left;
+}
+
+.gimh{
+    color: white;
+   
+}
+
+.sick{
+    color: yellow;
+    
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    
+}
+
+a{
+   
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    font-size: 150%;
+    
+}
+
+nav{
+    position: absolute;
+    right: 10%;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+li a:hover{
+    color: yellow;
+}
+
+.h1{
+    color: white;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    display: flex;
+    gap: 5px;
+}
+
+.ness{
+    color: greenyellow;
+     gap: 10px;
+}
+
+.hero{
+    display: flex;
+    gap: 10px;
+}
+
+.H1{
+    font-size: 600%;
+    color: rgb(244, 248, 9);
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+.search{
+    position: relative;
+    top: 4px;
+}
+
+.btnf{
+    position: absolute;
+    bottom: 8%;
+    left: 45%;
+    padding: 3px 10px;
+    border-radius: 60px;
+    background-color: rgb(60, 238, 5);
+    color: white;
+}
+
+.btns{
+    position: absolute;
+    bottom: 8%;
+    left: 55%;
+     padding: 3px 10px;
+    border-radius: 60px;
+    background-color: rgb(238, 13, 5);
+    color: white;
+}
+
+h1 {
+    text-shadow: 2px 2px 8px black;
+}
+
+.btnf:hover{
+    transition: 1s;
+    transform: translateY(-10px);
+    background-color: red;
+}
+
+.btns:hover{
+    transition: 1s;
+    transform: translateY(-10px);
+    background-color: aqua;
+}
+
+
+.par{
+    color: white;
+    position: absolute;
+    bottom: 38%;
+    left: 35%;
+}
+
+/* Tablet (max 992px) */
+@media (max-width: 992px) {
+    
+
+    .header{
+        font-size: 200%;
+    }
+
+    nav{
+        right: 5%;
+    }
+
+    ul{
+        gap: 20px;
+    }
+
+    .H1{
+        font-size: 400%;
+        left: 15%;
+        text-align: center;
+    }
+
+    .btnf{
+        left: 40%;
+        padding: 8px 20px;
+    }
+
+    .btns{
+        left: 55%;
+        padding: 8px 20px;
+    }
+}
+
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+
+    body{
+        background-attachment: scroll;
+    }
+
+    .header{
+        float: none;
+        justify-content: center;
+        margin-left: 0;
+        font-size: 180%;
+    }
+
+    nav{
+        position: static;
+        margin-top: 20px;
+    }
+
+    ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .search{
+        margin-top: 10px;
+    }
+
+    .H1{
+        position: static;
+        font-size: 250%;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .btnf,
+    .btns{
+        position: static;
+        padding: 10px 25px;
+    }
+
+    .btnf h1,
+    .btns h1{
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+
+    .H1{
+        font-size: 200%;
+    }
+
+    li{
+        font-size: 120%;
+    }
+
+    .header{
+        font-size: 150%;
+    }
+}
+
+.age{
+    
+}

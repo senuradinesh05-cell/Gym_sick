@@ -1,0 +1,59 @@
+
+body{
+    font-family:'Oswald', sans-serif;
+    background:url("gym_web_1.jpg") center/cover no-repeat;
+    min-height:100vh;
+    color:white;
+    position:relative;
+}
+
+/* Dark overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    z-index:-1;
+}
+
+/* ================= HEADER ================= */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+.logo span:last-child{
+    color:yellow;
+}
+
+/* ================= NAV ================= */
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+    transform:translateY(-3px);
+}
+
+.h1{
+    font-size: 300%;
+    text-align: center;
+}

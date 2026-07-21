@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Sick - Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --yellow:#ffcc00;
+    --dark:#0f0f0f;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+               url('gym_web_1.jpg') center/cover no-repeat fixed;
+    color:white;
+    overflow-x:hidden;
+}
+
+/*  HEADER  */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#000;
+    border-bottom:2px solid var(--yellow);
+}
+
+.logo{
+    font-family:'Oswald',sans-serif;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:var(--yellow);
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    text-transform:uppercase;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--yellow);
+}
+
+/*  TITLE  */
+.title{
+    text-align:center;
+    margin:60px 0;
+    font-size:3rem;
+    font-family:'Oswald',sans-serif;
+    color:var(--yellow);
+    letter-spacing:2px;
+}
+
+/*  3D CARDS  */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+    padding:0 8% 80px;
+    perspective:1000px;
+}
+
+.card{
+    height:350px;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:1s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:rotateY(180deg);
+}
+
+.card-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    text-align:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,204,0,0.2);
+    box-shadow:0 10px 40px rgba(255,204,0,0.15);
+}
+
+/* FRONT */
+.card-front h2{
+    font-family:'Oswald',sans-serif;
+    font-size:1.8rem;
+    margin-top:20px;
+}
+
+.icon{
+    font-size:60px;
+    color:var(--yellow);
+}
+
+/* BACK */
+.card-back{
+    transform:rotateY(180deg);
+}
+
+.card-back p{
+    font-size:0.95rem;
+    margin-bottom:20px;
+    color:#ddd;
+}
+
+.btn{
+    padding:10px 25px;
+    background:var(--yellow);
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+/*  RESPONSIVE  */
+@media(max-width:768px){
+    .title{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">GYM <span>SICK</span></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" style="color:#ffcc00;">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="location.html">Location</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="title">Our Services</h1>
+
+<section class="services">
+
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="card-face card-front">
+            <div class="icon">🏋️</div>
+            <h2>Weight Training</h2>
+        </div>
+        <div class="card-face card-back">
+            <p>Build strength and muscle with our modern equipment and expert guidance.</p>
+            <a href="contact.html" class="btn">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="card-face card-front">
+            <div class="icon">🔥</div>
+            <h2>Fat Burning</h2>
+        </div>
+        <div class="card-face card-back">
+            <p>High intensity workouts designed to burn calories and reduce body fat fast.</p>
+            <a href="contact.html" class="btn">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="card-face card-front">
+            <div class="icon">💪</div>
+            <h2>Personal Training</h2>
+        </div>
+        <div class="card-face card-back">
+            <p>One-on-one coaching with customized workout and diet plans.</p>
+            <a href="contact.html" class="btn">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="card-face card-front">
+            <div class="icon">🎵</div>
+            <h2>Zumba Class</h2>
+        </div>
+        <div class="card-face card-back">
+            <p>Fun and energetic dance workouts to stay fit and healthy.</p>
+            <a href="contact.html" class="btn">Join Now</a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

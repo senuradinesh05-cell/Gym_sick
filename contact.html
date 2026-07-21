@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | GYM SICK</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+    --yellow:#ffcc00;
+    --dark:#111;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+               url("gym_web_1.jpg") center/cover no-repeat fixed;
+    color:white;
+    animation:fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* ================= HEADER ================= */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#000;
+    border-bottom:2px solid var(--yellow);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Oswald',sans-serif;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:var(--yellow);
+}
+
+nav{
+    transition:0.3s;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    text-transform:uppercase;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--yellow);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:28px;
+    height:3px;
+    background:var(--yellow);
+}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Oswald',sans-serif;
+    font-size:3rem;
+    color:var(--yellow);
+}
+
+.hero h2{
+    margin-top:20px;
+    font-weight:300;
+}
+
+/* ================= CALL BUTTON ================= */
+.btn-call{
+    margin-top:40px;
+    padding:15px 40px;
+    background:var(--yellow);
+    color:black;
+    border:none;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    animation:pulse 2s infinite;
+}
+
+.btn-call:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 10px var(--yellow);}
+    50%{box-shadow:0 0 30px var(--yellow);}
+    100%{box-shadow:0 0 10px var(--yellow);}
+}
+
+/* ================= SOCIAL ================= */
+.social-section{
+    margin-top:50px;
+}
+
+.social-section h3{
+    color:var(--yellow);
+    margin-bottom:20px;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.social-icons a{
+    width:55px;
+    height:55px;
+    background:#222;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    color:white;
+    transition:0.4s;
+    transform-style:preserve-3d;
+}
+
+.social-icons a:hover{
+    transform:rotateY(180deg) scale(1.2);
+    background:var(--yellow);
+    color:black;
+    box-shadow:0 0 20px var(--yellow);
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+.floating-whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+    z-index:999;
+    animation:float 2s infinite ease-in-out;
+    transition:0.3s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.1);
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    nav{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#000;
+        width:220px;
+        display:none;
+        padding:20px;
+        border-left:2px solid var(--yellow);
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">GYM <span>SICK</span></div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="navMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" style="color:#ffcc00;">Contact</a></li>
+            <li><a href="location.html">Location</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Contact Us</h1>
+    <h2>If you have any problem, feel free to contact us.</h2>
+
+    <a href="tel:+94727610885">
+        <button class="btn-call">CALL NOW</button>
+    </a>
+
+    <div class="social-section">
+        <h3>Follow & Contact Us</h3>
+
+        <div class="social-icons">
+            <a href="https://wa.me/94727610885" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-viber"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/94727610885" target="_blank" class="floating-whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
